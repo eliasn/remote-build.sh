@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # check that the script is running from the project dir
-if [[ ! -f $PWD/make.sh ]]; then
-    echo "No make.sh in current dir."
+if [[ ! -f $PWD/remote-build.sh ]]; then
+    echo "No remote-build.sh in current dir."
     exit 1
 fi
 
