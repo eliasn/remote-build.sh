@@ -54,5 +54,5 @@ BUILD_DIR=build/$PROJECT
 BUILD_CMD="./build.sh"
 
 # rsync to the build server and build
-rsync -avr --exclude='tags' --exclude='remote-build.sh' . $BUILD_HOST:$BUILD_DIR
+rsync -avr --exclude='tags' --exclude='remote-build.sh' . "$BUILD_HOST":"$BUILD_DIR"
 ssh $PORT $HOST "cd $BUILD_DIR; $BUILD_CMD $ARGS"
